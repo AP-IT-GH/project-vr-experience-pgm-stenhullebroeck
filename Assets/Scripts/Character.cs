@@ -35,7 +35,6 @@ public class Character : Agent
 	{
 		Vector3 controller = Vector3.zero;
 
-		Debug.Log(actions);
 
 		controller.x = actions.ContinuousActions[0];
 		controller.z = actions.ContinuousActions[1];
