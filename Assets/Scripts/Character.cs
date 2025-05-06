@@ -17,7 +17,7 @@ public class Character : Agent
 	[SerializeField]
 	protected float attackRad;
 	[SerializeField]
-	protected float rotationSpd = 20f;
+	protected float rotationSpd = 90f;
 
 	InputAction moveAction;
 
