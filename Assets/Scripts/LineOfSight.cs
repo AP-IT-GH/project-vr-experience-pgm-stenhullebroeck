@@ -29,9 +29,6 @@ public class LineOfSight : MonoBehaviour
 
 			if (Vector3.Angle(transform.forward, dirToTarget.normalized) < viewAngle / 2)
             {
-
-                float distToTarget = Vector3.Distance(transform.position, target.transform.position);
-
                 if (!Physics.Raycast(transform.position, dirToTarget, dirToTarget.magnitude, obstacleMask))
                 {
                     VisibleTargets.Add(target.gameObject);

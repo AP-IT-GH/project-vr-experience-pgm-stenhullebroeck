@@ -848,9 +848,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 566e51b4aa5e06d4496e6104ca239a3a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1212452004}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 566e51b4aa5e06d4496e6104ca239a3a, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1212452003}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 566e51b4aa5e06d4496e6104ca239a3a, type: 3}
       insertIndex: -1
@@ -1289,27 +1286,6 @@ MonoBehaviour:
   m_UseChildActuators: 1
   m_DeterministicInference: 0
   m_ObservableAttributeHandling: 0
---- !u!114 &1212452004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212451999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c10171da3dc03b049a5566494aab6117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewRadius: 125.4
-  viewAngle: 37
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 64
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 8
-  VisibleTargets: []
 --- !u!64 &1212452006
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1346,6 +1322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1238539756}
+  - component: {fileID: 1238539757}
   m_Layer: 0
   m_Name: Eyes
   m_TagString: Untagged
@@ -1368,6 +1345,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1212452007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1238539757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238539755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10171da3dc03b049a5566494aab6117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 60
+  viewAngle: 79
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 64
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 8
+  VisibleTargets: []
 --- !u!1 &1311713751
 GameObject:
   m_ObjectHideFlags: 0
