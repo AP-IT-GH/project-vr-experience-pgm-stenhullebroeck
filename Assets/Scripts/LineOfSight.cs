@@ -25,12 +25,14 @@ public class LineOfSight : MonoBehaviour
 
         foreach (var target in targetsInViewRadius)
         {
-            Vector3 dirToTarget = (target.transform.position - transform.position).normalized;
-            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2)
+			Vector3 dirToTarget = (target.transform.position - transform.position);
+
+			if (Vector3.Angle(transform.forward, dirToTarget.normalized) < viewAngle / 2)
             {
+
                 float distToTarget = Vector3.Distance(transform.position, target.transform.position);
 
-                if (!Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask))
+                if (!Physics.Raycast(transform.position, dirToTarget, dirToTarget.magnitude, obstacleMask))
                 {
                     VisibleTargets.Add(target.transform);
                     Debug.Log(VisibleTargets);
