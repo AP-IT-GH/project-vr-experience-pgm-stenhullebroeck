@@ -11,7 +11,7 @@ public class LineOfSight : MonoBehaviour
     public LayerMask obstacleMask;
 
     [HideInInspector]
-    public List<Transform> VisibleTargets = new List<Transform>();
+    public List<GameObject> VisibleTargets = new List<GameObject>();
 
 	private void Start()
 	{
@@ -34,7 +34,7 @@ public class LineOfSight : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position, dirToTarget, dirToTarget.magnitude, obstacleMask))
                 {
-                    VisibleTargets.Add(target.transform);
+                    VisibleTargets.Add(target.gameObject);
                     Debug.Log(VisibleTargets);
                 }
             }
