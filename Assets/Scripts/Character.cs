@@ -41,11 +41,15 @@ public class Character : Agent
 
     void Update()
     {
-        
+		if (health <= 0)
+			return;
     }
 
 	public override void OnActionReceived(ActionBuffers actions)
 	{
+		if (health <= 0)
+			return;
+
 		Vector3 controller = Vector3.zero;
 
 
@@ -116,6 +120,7 @@ public class Character : Agent
 
 	public virtual int TakeDamage(int damage)
 	{
+
 		return damage;
 	}
 }
