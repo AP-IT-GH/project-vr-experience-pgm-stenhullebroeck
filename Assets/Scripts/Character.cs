@@ -7,7 +7,17 @@ using System.Collections.Generic;
 public class Character : Agent
 {
 	[SerializeField]
-    protected int health;
+    private int _health;
+	protected int health
+	{
+		set
+		{
+			if (value <= 0)
+				gameObject.layer = 0;
+			_health = value;
+		}
+		get { return _health; }
+	}
 	[SerializeField]
 	protected int damage;
 	[SerializeField]
@@ -17,7 +27,8 @@ public class Character : Agent
 
 	[Header("Attack")]
 	public LayerMask obstacleMask;
-	public LayerMask targetMask;
+	public LayerMask friendlyMask;
+	public LayerMask enemyMask;
 	[SerializeField]
 	protected float attackSpd;
 	[SerializeField]
@@ -41,11 +52,14 @@ public class Character : Agent
 
     void Update()
     {
-        
+
     }
 
 	public override void OnActionReceived(ActionBuffers actions)
 	{
+		if (health <= 0)
+			return;
+
 		Vector3 controller = Vector3.zero;
 
 
@@ -59,7 +73,7 @@ public class Character : Agent
 		{
 			if (Attack(lineOfSight.VisibleTargets[0]))
 			{
-				//TODO: implement
+				AddReward(1f);
 			}
 		}
 
@@ -102,7 +116,7 @@ public class Character : Agent
         if (Physics.Raycast(transform.position, transVec.normalized, out RaycastHit hit))
         {
             var collider = hit.collider.gameObject;
-            if (collider.layer == targetMask.value)
+            if (collider.layer == enemyMask.value)
             {
                 if(collider.TryGetComponent(out Character character))
 				{
@@ -116,6 +130,7 @@ public class Character : Agent
 
 	public virtual int TakeDamage(int damage)
 	{
-		return damage;
+		health -= damage;
+		return health;
 	}
 }
