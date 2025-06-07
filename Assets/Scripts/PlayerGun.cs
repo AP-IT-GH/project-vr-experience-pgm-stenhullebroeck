@@ -8,6 +8,8 @@ public class PlayerGun : MonoBehaviour
     private Transform bulletOrigin;
     [SerializeField]
     private ParticleSystem gunParticles;
+    [SerializeField]
+    private AudioSource shotSound;
 
     [Header("Ammo")]
     [SerializeField]
@@ -33,6 +35,8 @@ public class PlayerGun : MonoBehaviour
     private float frDeadline;
     private bool firing = false;
 
+    private float audioScale;
+
     private bool active = false;
 
     private InputControl rightTrigger;
@@ -42,8 +46,10 @@ public class PlayerGun : MonoBehaviour
     void Start()
     {
         ammo = magazineSize;
-        frDeadline = 1 / fireRate;
+        frDeadline = 60 / fireRate;
         rightTrigger = InputSystem.FindControl("<XRController>{RightHand}/{TriggerButton}");
+        audioScale = shotSound.clip.length / frDeadline;
+        shotSound.pitch = audioScale;
     }
 
     private void Update()
@@ -69,14 +75,14 @@ public class PlayerGun : MonoBehaviour
                 {
                     Fire();
                 }
-                else if ((frTimer != 0f && !firing) || firing)
-                    frTimer += Time.deltaTime;
+                frTimer += Time.deltaTime;
             }
             else if (frTimer > frDeadline)
             {
                 frTimer = 0f;
             }
         }
+        Debug.Log($"{frTimer} / {frDeadline}");
     }
 
     public void StartFiring()
@@ -107,6 +113,7 @@ public class PlayerGun : MonoBehaviour
         }
 
         gunParticles.Play();
+        shotSound.Play();
 
         if (Physics.Raycast(bulletOrigin.position, bulletOrigin.forward, out RaycastHit hit, 200f) && hit.collider.TryGetComponent<Character>(out Character character))
         {
