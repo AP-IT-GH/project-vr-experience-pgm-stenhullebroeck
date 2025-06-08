@@ -2,42 +2,6 @@
     "Sniper": {
         "checkpoints": [
             {
-                "steps": 77537,
-                "file_path": "results\\baseSniper\\Sniper\\Sniper-77537.onnx",
-                "reward": null,
-                "creation_time": 1749237083.957346,
-                "auxillary_file_paths": [
-                    "results\\baseSniper\\Sniper\\Sniper-77537.pt"
-                ]
-            },
-            {
-                "steps": 78056,
-                "file_path": "results\\baseSniper\\Sniper\\Sniper-78056.onnx",
-                "reward": null,
-                "creation_time": 1749237171.1941562,
-                "auxillary_file_paths": [
-                    "results\\baseSniper\\Sniper\\Sniper-78056.pt"
-                ]
-            },
-            {
-                "steps": 85339,
-                "file_path": "results\\baseSniper\\Sniper\\Sniper-85339.onnx",
-                "reward": null,
-                "creation_time": 1749237521.968814,
-                "auxillary_file_paths": [
-                    "results\\baseSniper\\Sniper\\Sniper-85339.pt"
-                ]
-            },
-            {
-                "steps": 91418,
-                "file_path": "results\\baseSniper\\Sniper\\Sniper-91418.onnx",
-                "reward": null,
-                "creation_time": 1749237831.1196108,
-                "auxillary_file_paths": [
-                    "results\\baseSniper\\Sniper\\Sniper-91418.pt"
-                ]
-            },
-            {
                 "steps": 96030,
                 "file_path": "results\\baseSniper\\Sniper\\Sniper-96030.onnx",
                 "reward": null,
@@ -45,15 +9,51 @@
                 "auxillary_file_paths": [
                     "results\\baseSniper\\Sniper\\Sniper-96030.pt"
                 ]
+            },
+            {
+                "steps": 97805,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-97805.onnx",
+                "reward": null,
+                "creation_time": 1749371572.1612937,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-97805.pt"
+                ]
+            },
+            {
+                "steps": 100878,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-100878.onnx",
+                "reward": null,
+                "creation_time": 1749371933.6806417,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-100878.pt"
+                ]
+            },
+            {
+                "steps": 102294,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-102294.onnx",
+                "reward": null,
+                "creation_time": 1749371994.5520992,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-102294.pt"
+                ]
+            },
+            {
+                "steps": 104211,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-104211.onnx",
+                "reward": null,
+                "creation_time": 1749372404.3350174,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-104211.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 96030,
+            "steps": 104211,
             "file_path": "results\\baseSniper\\Sniper.onnx",
             "reward": null,
-            "creation_time": 1749239971.9526136,
+            "creation_time": 1749372404.3350174,
             "auxillary_file_paths": [
-                "results\\baseSniper\\Sniper\\Sniper-96030.pt"
+                "results\\baseSniper\\Sniper\\Sniper-104211.pt"
             ]
         }
     },

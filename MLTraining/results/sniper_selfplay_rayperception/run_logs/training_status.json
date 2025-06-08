@@ -1,0 +1,66 @@
+{
+    "SniperSelfPlay": {
+        "elo": 1135.3865661322002,
+        "checkpoints": [
+            {
+                "steps": 1312421,
+                "file_path": "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-1312421.onnx",
+                "reward": null,
+                "creation_time": 1749406457.8272858,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-1312421.pt"
+                ]
+            },
+            {
+                "steps": 1499483,
+                "file_path": "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-1499483.onnx",
+                "reward": -4680.418467203776,
+                "creation_time": 1749407840.715291,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-1499483.pt"
+                ]
+            },
+            {
+                "steps": 1999649,
+                "file_path": "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-1999649.onnx",
+                "reward": -5899.351832798549,
+                "creation_time": 1749410495.4725592,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-1999649.pt"
+                ]
+            },
+            {
+                "steps": 2105248,
+                "file_path": "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-2105248.onnx",
+                "reward": -7441.2237548828125,
+                "creation_time": 1749411081.0660765,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-2105248.pt"
+                ]
+            },
+            {
+                "steps": 2282234,
+                "file_path": "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-2282234.onnx",
+                "reward": null,
+                "creation_time": 1749413029.4332788,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-2282234.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2282234,
+            "file_path": "results\\sniper_selfplay_rayperception\\SniperSelfPlay.onnx",
+            "reward": null,
+            "creation_time": 1749413029.4332788,
+            "auxillary_file_paths": [
+                "results\\sniper_selfplay_rayperception\\SniperSelfPlay\\SniperSelfPlay-2282234.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

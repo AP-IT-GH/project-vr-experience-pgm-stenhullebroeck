@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Obstacle
+  - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX
