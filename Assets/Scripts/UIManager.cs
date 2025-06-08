@@ -2,7 +2,17 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance;
+    private static UIManager instance;
+    public static UIManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindFirstObjectByType<UIManager>();
+            return instance;
+
+        }
+    }
 
     public GameObject startCanvas;
     public GameObject gameplayCanvas;
@@ -11,8 +21,7 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     public void ShowStartCanvas() => startCanvas.SetActive(true);

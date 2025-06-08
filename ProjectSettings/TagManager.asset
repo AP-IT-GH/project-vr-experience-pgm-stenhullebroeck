@@ -5,9 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - UIOffset
   - Obstacle
   - Enemy
   - Wall
+  - Entities
   layers:
   - Default
   - TransparentFX

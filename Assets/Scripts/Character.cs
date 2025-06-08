@@ -182,6 +182,10 @@ public class Character : Agent
 					Debug.Log(targetHealth);
 					return true;
 				}
+				else if (collider.TryGetComponent(out HealthManager health))
+				{
+					health.health -= damage;
+				}
             }
         }
 		return false;
@@ -232,7 +236,7 @@ public class Character : Agent
 		if (healthManager.health <= 0)
 		{
 			AddReward(-10f);
-			episodeManager.EndAllEpisodes();
+			episodeManager?.EndAllEpisodes();
 		}
 
 		return healthManager.health;

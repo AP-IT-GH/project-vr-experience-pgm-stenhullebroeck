@@ -15,6 +15,9 @@ public class PausedState : IState
         Debug.Log("Game is paused");
         onPause?.Invoke();
         Time.timeScale = 0f;
+        UIManager.Instance.pauseCanvas.SetActive(true);
+        var targetPos = GameObject.FindWithTag("UIOffset").transform;
+        UIManager.Instance.pauseCanvas.transform.SetPositionAndRotation(targetPos.position, targetPos.rotation);
     }
         public void Update()
     {
@@ -22,6 +25,7 @@ public class PausedState : IState
 
     public void OnExit()
     {
+        UIManager.Instance.pauseCanvas.SetActive(false);
         Debug.Log("Resuming Game");
         onResume?.Invoke();
         Time.timeScale = 1f;

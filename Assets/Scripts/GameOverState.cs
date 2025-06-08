@@ -7,6 +7,8 @@ public class GameOverState : IState
         Debug.Log("Game Over");
         Time.timeScale = 0f;
         UIManager.Instance.ShowGameOverCanvas();
+        var targetPos = GameObject.FindWithTag("UIOffset").transform;
+        UIManager.Instance.gameOverCanvas.transform.SetPositionAndRotation(targetPos.position, targetPos.rotation);
     }
 
     public void Update() { }

@@ -1,5 +1,6 @@
-
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,10 +10,10 @@ public class GameManager : MonoBehaviour
     private bool startPressed;
     private bool pausePressed;
     private bool stopPressed;
+    private bool mainMenuPressed;
 
-    public GameObject outsideArena; //SmallerTerrain
-    public GameObject insideArena; //GameField
-    private GameObject activeArena;
+    private InputAction pauseAction;
+    private bool prevPressedPause = false;
 
     void Awake()
     {
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         _stateMachine.AddTransition(start, playing, () => startPressed);
         _stateMachine.AddTransition(playing, paused, () => pausePressed);
         _stateMachine.AddTransition(paused, playing, () => pausePressed);
+        _stateMachine.AddTransition(paused, start, () => mainMenuPressed);
         _stateMachine.AddTransition(playing, gameOver, () => stopPressed);
         _stateMachine.AddTransition(paused, gameOver, () => stopPressed);
         _stateMachine.AddTransition(start, gameOver, () => stopPressed);
@@ -35,46 +37,33 @@ public class GameManager : MonoBehaviour
         _stateMachine.SetState(start);
     }
 
+    private void Start()
+    {
+        pauseAction = InputSystem.actions.FindAction("Pause");
+    }
+
     void Update()
     {
+        if (!prevPressedPause)
+        {
+            pausePressed = pauseAction.ReadValue<float>() > 0f;
+            prevPressedPause = true;
+        }
+        else if (pauseAction.ReadValue<float>() == 0f)
+            prevPressedPause = false;
         _stateMachine.Tick();
-        startPressed = pausePressed = stopPressed = false;
+        startPressed = pausePressed = stopPressed = mainMenuPressed = false;
     }
 
     public void OnStartPressed() => startPressed = true;
     public void OnPausePressed() => pausePressed = true;
     public void OnStopPressed() => stopPressed = true;
+    public void OnMainMenuPressed() => mainMenuPressed = true;
 
-
-    public void StartInsideArena()
+    public void SelectLevel(int scene)
     {
-        Debug.Log("StartInsideArena called");
-        SelectArena(false, true);
+        SceneManager.LoadScene(scene);
         OnStartPressed();
-    }
-
-    public void StartOutsideArena()
-    {
-        SelectArena(true, false);
-        OnStartPressed();
-    }
-
-    private void SelectArena(bool useOutside, bool useInside)
-    {
-        if (activeArena != null)
-            activeArena.SetActive(false);
-
-        if (useOutside)
-        activeArena = outsideArena;
-        else if (useInside)
-            activeArena = insideArena;
-        else
-        {
-            Debug.LogWarning("Error with Booleans, default to insideArena");
-            activeArena = insideArena;
-        }  
-
-        activeArena.SetActive(true);
     }
 
 

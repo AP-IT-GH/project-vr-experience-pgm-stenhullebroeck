@@ -10,7 +10,7 @@ public class EpisodeManager : MonoBehaviour
 
 	private void Start()
 	{
-		agents = new List<Agent>(gameObject.GetComponentsInChildren<Character>());
+		agents = new List<Agent>(gameObject.GetComponentsInChildren<Agent>());
 
 		agentGroup = new SimpleMultiAgentGroup();
 
