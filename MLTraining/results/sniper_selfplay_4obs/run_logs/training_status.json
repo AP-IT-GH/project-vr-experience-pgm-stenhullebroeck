@@ -1,0 +1,57 @@
+{
+    "SniperSelfPlay": {
+        "elo": 1199.5,
+        "checkpoints": [
+            {
+                "steps": 1400,
+                "file_path": "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-1400.onnx",
+                "reward": 283.7234344482422,
+                "creation_time": 1749381313.356027,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-1400.pt"
+                ]
+            },
+            {
+                "steps": 90231,
+                "file_path": "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-90231.onnx",
+                "reward": 1101.1954326629639,
+                "creation_time": 1749383123.063532,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-90231.pt"
+                ]
+            },
+            {
+                "steps": 112548,
+                "file_path": "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-112548.onnx",
+                "reward": -7270.231201171875,
+                "creation_time": 1749383979.6213427,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-112548.pt"
+                ]
+            },
+            {
+                "steps": 171336,
+                "file_path": "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-171336.onnx",
+                "reward": -5963.633310953776,
+                "creation_time": 1749384389.2975254,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-171336.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 171336,
+            "file_path": "results\\sniper_selfplay_4obs\\SniperSelfPlay.onnx",
+            "reward": -5963.633310953776,
+            "creation_time": 1749384389.2975254,
+            "auxillary_file_paths": [
+                "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-171336.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
