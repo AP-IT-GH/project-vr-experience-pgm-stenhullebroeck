@@ -1,0 +1,65 @@
+{
+    "Sniper": {
+        "checkpoints": [
+            {
+                "steps": 77537,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-77537.onnx",
+                "reward": null,
+                "creation_time": 1749237083.957346,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-77537.pt"
+                ]
+            },
+            {
+                "steps": 78056,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-78056.onnx",
+                "reward": null,
+                "creation_time": 1749237171.1941562,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-78056.pt"
+                ]
+            },
+            {
+                "steps": 85339,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-85339.onnx",
+                "reward": null,
+                "creation_time": 1749237521.968814,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-85339.pt"
+                ]
+            },
+            {
+                "steps": 91418,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-91418.onnx",
+                "reward": null,
+                "creation_time": 1749237831.1196108,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-91418.pt"
+                ]
+            },
+            {
+                "steps": 96030,
+                "file_path": "results\\baseSniper\\Sniper\\Sniper-96030.onnx",
+                "reward": null,
+                "creation_time": 1749239971.9526136,
+                "auxillary_file_paths": [
+                    "results\\baseSniper\\Sniper\\Sniper-96030.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 96030,
+            "file_path": "results\\baseSniper\\Sniper.onnx",
+            "reward": null,
+            "creation_time": 1749239971.9526136,
+            "auxillary_file_paths": [
+                "results\\baseSniper\\Sniper\\Sniper-96030.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

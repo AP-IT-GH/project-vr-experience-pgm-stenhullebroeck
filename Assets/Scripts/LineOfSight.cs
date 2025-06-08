@@ -32,7 +32,6 @@ public class LineOfSight : MonoBehaviour
                 if (!Physics.Raycast(transform.position, dirToTarget, dirToTarget.magnitude, obstacleMask))
                 {
                     VisibleTargets.Add(target.gameObject);
-                    Debug.Log(VisibleTargets);
                 }
             }
         }

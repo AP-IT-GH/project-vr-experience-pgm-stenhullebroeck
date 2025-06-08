@@ -1,0 +1,47 @@
+{
+    "Sniper": {
+        "checkpoints": [
+            {
+                "steps": 267,
+                "file_path": "results\\navMeshSniper\\Sniper\\Sniper-267.onnx",
+                "reward": null,
+                "creation_time": 1749236852.757646,
+                "auxillary_file_paths": [
+                    "results\\navMeshSniper\\Sniper\\Sniper-267.pt"
+                ]
+            },
+            {
+                "steps": 1291,
+                "file_path": "results\\navMeshSniper\\Sniper\\Sniper-1291.onnx",
+                "reward": null,
+                "creation_time": 1749236950.8147578,
+                "auxillary_file_paths": [
+                    "results\\navMeshSniper\\Sniper\\Sniper-1291.pt"
+                ]
+            },
+            {
+                "steps": 1675,
+                "file_path": "results\\navMeshSniper\\Sniper\\Sniper-1675.onnx",
+                "reward": null,
+                "creation_time": 1749237029.5796957,
+                "auxillary_file_paths": [
+                    "results\\navMeshSniper\\Sniper\\Sniper-1675.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1675,
+            "file_path": "results\\navMeshSniper\\Sniper.onnx",
+            "reward": null,
+            "creation_time": 1749237029.5796957,
+            "auxillary_file_paths": [
+                "results\\navMeshSniper\\Sniper\\Sniper-1675.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
