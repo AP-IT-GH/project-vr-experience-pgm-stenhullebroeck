@@ -13,10 +13,11 @@ public class Sniper : Character
 
 			if (Attack(target, out int targetHealth))
 			{
+				//AddReward(10f);
 				if (targetHealth <= 0)
 				{
 					Debug.Log("kill");
-					AddReward(200f);
+					AddReward(30f);
 				}	
 			} 
 		} else
