@@ -5,7 +5,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     public GameObject startCanvas;
-    // public GameObject gameplayCanvas;
+    public GameObject gameplayCanvas;
     public GameObject pauseCanvas;
     public GameObject gameOverCanvas;
 
@@ -17,8 +17,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowStartCanvas() => startCanvas.SetActive(true);
     public void HideStartCanvas() => startCanvas.SetActive(false);
-    // public void ShowGameplayCanvas() => gameplayCanvas.SetActive(true);
-    // public void HideGameplayCanvas() => gameplayCanvas.SetActive(false);
+    public void ShowGameplayCanvas() => gameplayCanvas.SetActive(true);
+    public void HideGameplayCanvas() => gameplayCanvas.SetActive(false);
     public void ShowPauseCanvas() => pauseCanvas.SetActive(true);
     public void HidePauseCanvas() => pauseCanvas.SetActive(false);
     public void ShowGameOverCanvas() => gameOverCanvas.SetActive(true);
