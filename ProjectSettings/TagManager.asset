@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Enemy
   - Wall
+  - Entities
   layers:
   - Default
   - TransparentFX
