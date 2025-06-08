@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Anchor
   - UIOffset
+  - Obstacle
+  - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX

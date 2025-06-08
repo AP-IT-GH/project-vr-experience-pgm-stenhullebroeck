@@ -33,6 +33,12 @@ public class Character : Agent
 	protected EpisodeManager episodeManager;
 	private Vector3 startPos;
 	private Quaternion startRot;
+	[SerializeField]
+	protected Collider spawnArea;
+	[SerializeField] 
+	private float spawnCheckRadius = 0.5f;
+	private Rigidbody rb;
+	private float previousYRotation;
 
 
 	InputAction moveAction;
@@ -50,12 +56,14 @@ public class Character : Agent
 		startPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 		startRot = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
 		lineOfSight.targetMask = enemyMask;
+		rb = GetComponent<Rigidbody>();
 	}
 
 	void FixedUpdate()
     {
 		if (lineOfSight.VisibleTargets.Count > 0)
 		{
+			AddReward(0.5f);
 			float dirDiff = AngleToTarget(lineOfSight.VisibleTargets[0]);
 			AddReward(1f - 0.01f * dirDiff);
 		} else
@@ -68,7 +76,10 @@ public class Character : Agent
 	{
 		base.OnEpisodeBegin();
 		healthManager.health = 20;
-		transform.SetPositionAndRotation(startPos, startRot);
+
+		Vector3 spawnPos = GetRandomSpawnPosition();
+		transform.SetPositionAndRotation(spawnPos, Quaternion.Euler(0f, Random.Range(0, 360f), 0f));
+		previousYRotation = transform.eulerAngles.y;
 		Debug.Log("Starting new episode");
 	}
 
@@ -100,11 +111,24 @@ public class Character : Agent
 		controller.x = actions.ContinuousActions[0];
 		controller.z = actions.ContinuousActions[1];
 
+		Vector3 movement = transform.forward * controller.z * this.movementSpd * Time.deltaTime;
+		float deltaY = controller.x * rotationSpd * Time.deltaTime;
+		Quaternion rotation = rb.rotation * Quaternion.Euler(0f, deltaY, 0f);
+		rotation.eulerAngles = new Vector3(0f, rotation.eulerAngles.y, 0f);
 
-		transform.Translate(Vector3.forward * controller.z * this.movementSpd * Time.deltaTime);
-		transform.Rotate(Vector3.up, controller.x * rotationSpd * Time.deltaTime, Space.Self);
+		rb.MovePosition(rb.position + movement);
+		rb.MoveRotation(rotation);
 
-		AddReward(-1f * 0.01f);
+		float currentYRotation = transform.eulerAngles.y;
+		if (lineOfSight.VisibleTargets.Count == 0)
+		{
+			float deltaRotation = Mathf.DeltaAngle(previousYRotation, transform.eulerAngles.y);
+			AddReward(-Mathf.Abs(deltaRotation) * 0.001f);
+		}
+
+		previousYRotation = currentYRotation;
+
+		AddReward(-0.01f);
 	}
 
 	public override void Heuristic(in ActionBuffers actionsOut)
@@ -119,17 +143,6 @@ public class Character : Agent
 		continuousActions[0] = moveValue.x;
 		continuousActions[1] = moveValue.y;
 		discreteActions[0] = 1;
-	}
-
-	public static Vector3 RandomNavSphere(Vector3 origin, float distance)
-	{
-		Vector3 randomDirection = Random.insideUnitSphere * distance;
-		randomDirection += origin;
-
-		NavMeshHit navHit;
-		NavMesh.SamplePosition(randomDirection, out navHit, distance, NavMesh.AllAreas);
-
-		return navHit.position;
 	}
 
 	public virtual bool Attack(GameObject target, out int targetHealth)
@@ -188,6 +201,29 @@ public class Character : Agent
 
 		return dirDiff;
 	}
+
+	private Vector3 GetRandomSpawnPosition(int maxAttempts = 20)
+	{
+		for (int i = 0; i < maxAttempts; i++)
+		{
+			Vector3 randomPos = new Vector3(
+				Random.Range(spawnArea.bounds.min.x, spawnArea.bounds.max.x),
+				spawnArea.bounds.max.y + 1f,
+				Random.Range(spawnArea.bounds.min.z, spawnArea.bounds.max.z)
+			);
+
+			if (Physics.Raycast(randomPos, Vector3.down, out RaycastHit hit, 10f))
+			{
+				if (!Physics.CheckSphere(hit.point, spawnCheckRadius, obstacleMask))
+				{
+					return hit.point;
+				}
+			}
+		}
+
+		return spawnArea.bounds.center;
+	}
+
 
 	public virtual int TakeDamage(int damage)
 	{
