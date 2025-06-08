@@ -37,13 +37,22 @@
                 "auxillary_file_paths": [
                     "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-171336.pt"
                 ]
+            },
+            {
+                "steps": 171336,
+                "file_path": "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-171336.onnx",
+                "reward": null,
+                "creation_time": 1749384641.5976458,
+                "auxillary_file_paths": [
+                    "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-171336.pt"
+                ]
             }
         ],
         "final_checkpoint": {
             "steps": 171336,
             "file_path": "results\\sniper_selfplay_4obs\\SniperSelfPlay.onnx",
-            "reward": -5963.633310953776,
-            "creation_time": 1749384389.2975254,
+            "reward": null,
+            "creation_time": 1749384641.5976458,
             "auxillary_file_paths": [
                 "results\\sniper_selfplay_4obs\\SniperSelfPlay\\SniperSelfPlay-171336.pt"
             ]
