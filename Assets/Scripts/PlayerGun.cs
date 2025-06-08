@@ -82,7 +82,6 @@ public class PlayerGun : MonoBehaviour
                 frTimer = 0f;
             }
         }
-        Debug.Log($"{frTimer} / {frDeadline}");
     }
 
     public void StartFiring()
@@ -115,7 +114,7 @@ public class PlayerGun : MonoBehaviour
         gunParticles.Play();
         shotSound.Play();
 
-        if (Physics.Raycast(bulletOrigin.position, bulletOrigin.forward, out RaycastHit hit, 200f) && hit.collider.TryGetComponent<Character>(out Character character))
+        if (Physics.Raycast(bulletOrigin.position, bulletOrigin.forward, out RaycastHit hit, 200f) && hit.collider.TryGetComponent(out Character character))
         {
             character.TakeDamage(damage);
         }

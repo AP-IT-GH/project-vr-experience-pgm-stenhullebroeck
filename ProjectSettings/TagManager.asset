@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - UIOffset
   layers:
   - Default
   - TransparentFX

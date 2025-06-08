@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartState : IState
 {
     public void OnEnter()
     {
         Debug.Log("Entering StartState");
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+            SceneManager.LoadScene(0);
 
         Time.timeScale = 0f;
 

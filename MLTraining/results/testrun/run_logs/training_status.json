@@ -1,0 +1,57 @@
+{
+    "SniperSelfPlay": {
+        "elo": 1135.8637024116297,
+        "checkpoints": [
+            {
+                "steps": 5199,
+                "file_path": "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-5199.onnx",
+                "reward": -7410.921040852864,
+                "creation_time": 1749388036.577215,
+                "auxillary_file_paths": [
+                    "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-5199.pt"
+                ]
+            },
+            {
+                "steps": 6599,
+                "file_path": "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-6599.onnx",
+                "reward": -7272.19580078125,
+                "creation_time": 1749388216.4124136,
+                "auxillary_file_paths": [
+                    "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-6599.pt"
+                ]
+            },
+            {
+                "steps": 12198,
+                "file_path": "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-12198.onnx",
+                "reward": -5193.629791259766,
+                "creation_time": 1749388572.380636,
+                "auxillary_file_paths": [
+                    "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-12198.pt"
+                ]
+            },
+            {
+                "steps": 253956,
+                "file_path": "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-253956.onnx",
+                "reward": 19.902688819628494,
+                "creation_time": 1749391031.643583,
+                "auxillary_file_paths": [
+                    "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-253956.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 253956,
+            "file_path": "results\\testrun\\SniperSelfPlay.onnx",
+            "reward": 19.902688819628494,
+            "creation_time": 1749391031.643583,
+            "auxillary_file_paths": [
+                "results\\testrun\\SniperSelfPlay\\SniperSelfPlay-253956.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
