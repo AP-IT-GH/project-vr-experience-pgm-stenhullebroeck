@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         _stateMachine.AddTransition(playing, gameOver, () => stopPressed);
         _stateMachine.AddTransition(paused, gameOver, () => stopPressed);
         _stateMachine.AddTransition(start, gameOver, () => stopPressed);
+        _stateMachine.AddTransition(gameOver, start, () => mainMenuPressed);
 
         _stateMachine.SetState(start);
     }

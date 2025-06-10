@@ -214,6 +214,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 638365878}
     m_Modifications:
+    - target: {fileID: 467697846555117657, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
+      propertyPath: m_margin.w
+      value: -1.5515592
+      objectReference: {fileID: 0}
+    - target: {fileID: 467697846555117657, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
+      propertyPath: m_margin.x
+      value: -3.0295258
+      objectReference: {fileID: 0}
+    - target: {fileID: 467697846555117657, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
+      propertyPath: m_margin.y
+      value: -1.0623084
+      objectReference: {fileID: 0}
+    - target: {fileID: 467697846555117657, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
+      propertyPath: m_margin.z
+      value: -7.3259377
+      objectReference: {fileID: 0}
+    - target: {fileID: 467697846555117657, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 467697846555117657, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2800811493196369896, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -300,10 +324,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599636766110037037, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7560643634714825705, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
       propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252716264152964901, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8252716264152964901, guid: 2faa002b0307a0d45add2217ed2038d3, type: 3}
@@ -1067,6 +1095,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 638365878}
     m_Modifications:
+    - target: {fileID: 3039483616004203067, guid: 5ab7874ac5b87ce41a4d04a3711c2fbd, type: 3}
+      propertyPath: m_text
+      value: Robo Gulag
+      objectReference: {fileID: 0}
     - target: {fileID: 3953369671658212312, guid: 5ab7874ac5b87ce41a4d04a3711c2fbd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1162,6 +1194,10 @@ PrefabInstance:
     - target: {fileID: 5524645888934045465, guid: 5ab7874ac5b87ce41a4d04a3711c2fbd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948607282650383145, guid: 5ab7874ac5b87ce41a4d04a3711c2fbd, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8666222357773332606, guid: 5ab7874ac5b87ce41a4d04a3711c2fbd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
