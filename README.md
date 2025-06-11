@@ -153,10 +153,10 @@ De AI zorgt ervoor dat de vijand zicht dynamisch beweegt en niet te voorspelbaar
 De VR-ervaring is nu veel interactiever tegenover de autobattler versie. De speler staat nu midden in het gevecht in plaats van enkel het gevecht te observeren. De speler gebruikt nu zelf handbewegingen om rond te bewegen, richten en schieten. Dit maakt de beleving veel directer en intenser dan bij het originele autobattler concept.
 ## Resultaten
 ### Tensorboard
-![Tensor grafiek Trainingen](TensorImages\GrafiekTrainenTensor.png)
+![Tensor grafiek Trainingen](TensorImages/GrafiekTrainenTensor.png)
 Bij Bovenstaande versie kan men de oranje Training (De oudere Training) en de paarse Training (De geüpdated Training) vergelijken met elkaar. De oranje lijn geeft diepe negatieve beloningen, duidend op slecht gedrag dat waarschijnlijk herhaaldelijk wordt afgestraft. De paarse lijn fluctueerd erg, maar bereikt uiteindelijk regelmatige hoge cumulatieve beloningen, wat een indicatie is van succesvol gedrag, afgewisseld met meer leerinstabiliteit.
 
-![Tensor grafiek Trainingen](TensorImages\TensorEpisodeGrafiek.jpg)
+![Tensor grafiek Trainingen](TensorImages/TensorEpisodeGrafiek.jpg)
 Bij deze bovenstaande grafiek wordt getoond hoe lang de episodes gemiddeld duren. De oranje lijn vertoond wisselvallig gedrag. Episodes fluctueren sterk wat wijst op instabiliteit in het leerproces. De paarse lijn toont een vrij consistente episode lengte richting het einde van de training, rond de maximale waarde, wat duidt op stabiel en gewenst gedrag.
 
 ### Opvallende Waarnemingen bij trainingen
